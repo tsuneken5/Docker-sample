@@ -11,21 +11,24 @@ $ tree -a -F --dirsfirst
 ```
 
 
-# コマンド
-## イメージビルド
+# 手順
+## イメージのビルド
 ```
 $ docker-compose build
 ```
 
-## プロジェクト作成
+## プロジェクトの作成
 ```
 $ docker-compose run --rm angular ng new sample-app --directory .
 ```
 
-## コンテナ起動
+## コンテナの起動
 ```
 $ docker-compose up -d
 ```
 
 # 確認
-ブラウザから localhost:4200/ にアクセスして、Angularの画面が表示されれば成功。
+ブラウザから http://localhost:4200/ にアクセスして、Angularの画面が表示されれば成功。
+
+# 解説（ブログ）
+[Windows11 + WSL2 ＋ Docker で Anuglar開発環境を作成する](https://engineer.tsuneken5.com/2024/08/31/docker-angular/)
