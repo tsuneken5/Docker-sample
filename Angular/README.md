@@ -12,6 +12,11 @@ $ tree -a -F --dirsfirst
 
 
 # 手順
+## プロジェクトフォルダの作成
+```
+$ mkdir sample-app
+```
+
 ## イメージのビルド
 ```
 $ docker-compose build
