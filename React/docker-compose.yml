@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react:
+    build:
+      context: .
+    volumes:
+      - ./sample-app:/home/node/sample-app
+    command: npm start
+    ports:
+      - "3000:3000"
+    stdin_open: true
