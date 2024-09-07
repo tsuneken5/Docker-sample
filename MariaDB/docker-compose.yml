@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    build:
+      context: .
+    environment:
+      MARIADB_DATABASE: defaultdb
+      MARIADB_USER: dbuser
+      MARIADB_PASSWORD: dbpass
+      MARIADB_ROOT_PASSWORD: rootpass
+      TZ: Asia/Tokyo
+    volumes:
+      - db-volume:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - 3306:3306
+
+volumes:
+  db-volume:
+    name: mariadb-data
+    driver: local
